@@ -1,6 +1,6 @@
-# Orr-Sommerfeld Analysis Repository
+# Orr-Sommerfeld Stability Analysis
 
-This repository provides tools and resources for analyzing the Orr-Sommerfeld equation, a fundamental equation in fluid dynamics used to study the stability of viscous flows. The primary focus is solving and visualizing solutions to this equation using Jupyter Notebooks.
+This project implements a numerical solution to the **Orr-Sommerfeld equation** for analyzing the linear stability of Poiseuille flow, a parallel shear flow with a parabolic velocity profile. The code computes the eigenvalue spectrum, perturbation profiles, and neutral stability curve using the **Finite Difference Method (FDM)**.
 
 ## Table of Contents
 
@@ -17,7 +17,11 @@ This repository provides tools and resources for analyzing the Orr-Sommerfeld eq
 
 ## Overview
 
-The Orr-Sommerfeld equation is a linear differential equation that arises in the study of hydrodynamic stability. It is essential in understanding the transition from laminar to turbulent flow in fluid systems. This repository implements numerical solutions and provides visualizations to better comprehend the underlying physics.
+The Orr-Sommerfeld equation is a fundamental tool in hydrodynamic stability, used to determine whether small perturbations in a flow decay (stable) or grow (unstable), potentially leading to turbulence. This implementation focuses on:
+- **Poiseuille flow**: A parabolic velocity profile \( U(y) = 1 - y^2 \) in a channel domain \( y \in [-1, 1] \).
+- **Temporal stability analysis**: Solving the eigenvalue problem to find complex wave speeds \( c = c_r + i c_i \), where \( c_i > 0 \) indicates instability.
+- **Numerical approach**: Discretizing the equation using FDM and solving the resulting generalized eigenvalue problem.
+- **Outputs**: Eigenvalue spectra, perturbation profiles (\( v \)- and \( u \)-perturbations), and the neutral stability curve.
 
 ---
 
@@ -36,7 +40,6 @@ To use this repository, ensure you have the following installed:
 
 - Python 3.x
 - Jupyter Notebook
-- Required Python libraries (listed in `requirements.txt`)
 
 ---
 
@@ -52,11 +55,6 @@ To use this repository, ensure you have the following installed:
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install the required Python libraries:
-   ```bash
-   pip install -r requirements.txt
    ```
 
 ---
@@ -79,7 +77,7 @@ To use this repository, ensure you have the following installed:
 This repository includes a presentation that provides a comprehensive overview of the Orr-Sommerfeld equation, its applications, and the results generated using the tools in this repository. 
 
 ### Access the Presentation:
-You can find the presentation file [here](Orr-Sommerfeld.pptx).
+You can find the presentation file [here](Orr-Sommerfeld.pdf).
 
 ---
 
