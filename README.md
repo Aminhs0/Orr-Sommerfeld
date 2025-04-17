@@ -22,7 +22,7 @@ The Orr-Sommerfeld equation is a fundamental tool in hydrodynamic stability, use
 - **Temporal stability analysis**: Solving the eigenvalue problem to find complex wave speeds \( c = c_r + i c_i \), where \( c_i > 0 \) indicates instability.
 - **Numerical approach**: Discretizing the equation using FDM and solving the resulting generalized eigenvalue problem.
 - **Outputs**: Eigenvalue spectra, perturbation profiles (\( v \)- and \( u \)-perturbations), and the neutral stability curve.
-
+[Eigenvalue Spectrum](figs/picture1.png)
 ---
 
 ## Features
